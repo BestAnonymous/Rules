@@ -5,7 +5,7 @@ mode: rule
 log-level: warning
 ipv6: true
 external-controller: 127.0.0.1:28689
-secret: "hhYEHCFfz28xcosRWs5EkhZBVscnBzTDpq68CZNaXttN9tQTstsZrzwjA4LebZ68y9cve835vo9Lw46aBziTRGDs88n9DnK7mXnaoHFpDu8tS9VSRBmpd7aYyz4TWg2e"
+secret: hhYEHCFfz28xcosRWs5EkhZBVscnBzTDpq68CZNaXttN9tQTstsZrzwjA4LebZ68y9cve835vo9Lw46aBziTRGDs88n9DnK7mXnaoHFpDu8tS9VSRBmpd7aYyz4TWg2e
 profile:
   store-selected: true
   store-fake-ip: true
@@ -30,6 +30,6 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   nameserver-policy:
-    "dns.msftncsi.com": "119.29.29.29"
-    "www.msftncsi.com": "119.29.29.29"
-    "www.msftconnecttest.com": "119.29.29.29"
+    dns.msftncsi.com: 119.29.29.29
+    www.msftncsi.com: 119.29.29.29
+    www.msftconnecttest.com: 119.29.29.29
