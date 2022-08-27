@@ -1,0 +1,35 @@
+mixed-port: 27271
+allow-lan: false
+bind-address: "*"
+mode: rule
+log-level: warning
+ipv6: true
+external-controller: 127.0.0.1:28689
+secret: "hhYEHCFfz28xcosRWs5EkhZBVscnBzTDpq68CZNaXttN9tQTstsZrzwjA4LebZ68y9cve835vo9Lw46aBziTRGDs88n9DnK7mXnaoHFpDu8tS9VSRBmpd7aYyz4TWg2e"
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  listen: 127.0.0.1:49754
+  ipv6: true
+  default-nameserver:
+    - 8.8.8.8
+    - 119.29.29.29
+    - 223.5.5.5
+    - 180.76.76.76
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - dns.msftncsi.com
+    - www.msftncsi.com
+    - www.msftconnecttest.com
+  nameserver:
+    - tls://dot.pub:853
+    - tls://dns.alidns.com:853
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  nameserver-policy:
+    "dns.msftncsi.com": "119.29.29.29"
+    "www.msftncsi.com": "119.29.29.29"
+    "www.msftconnecttest.com": "119.29.29.29"
